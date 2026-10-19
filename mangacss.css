@@ -1,0 +1,163 @@
+:root{
+    --blanco:#ffffff;
+    --negro:#000000;
+    --primario:rgb(114, 7, 255);
+    --secundario:#c40a0a;
+    --gris:#757575;
+    --grisclaro: #f1f1f1;
+    --fuente-principal:8rem;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secundario);
+    
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';
+    color: #333;
+    padding: 0 20px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 40px 0;
+    
+    gap: 15px;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--blanco);
+}
+
+h2{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--negro);
+}
+
+p{
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--negro);
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+
+}
+
+.logo-pequeno {
+    width: 100px;
+    height: auto;
+    border-radius: .5rem;
+}
+
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgb(0, 0, 0, 1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.icon-cart {
+    width: 40px;
+    height: 40px;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+}
+
+.container-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .container-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.item {
+    border-radius: 10px;
+}
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.70);
+}
+
+.item img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure {
+    overflow: hidden;
+}
+
+.item figure img:hover {
+    transform: scale(1.2);
+}
+
+.info-product {
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button {
+    border: none;
+    background: none;
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
